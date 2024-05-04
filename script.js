@@ -2,7 +2,7 @@ setInterval(() => {
     const kms = document.querySelector("#cobrarkm").querySelector("input").value
 
     if (Number(kms) && Number(kms) >= 3) {
-        document.querySelector("#cobrarkm").querySelector("h1").textContent = `Para ${kms} Km's você deverá cobrar o adicional de: R$ ${(kms - 3) * 500}`
+        document.querySelector("#cobrarkm").querySelector("h1").textContent = `${((kms/2)*1000).toLocaleString('pt-BR', {style:'currency',currency:'brl'})}`
     } else {
         document.querySelector("#cobrarkm").querySelector("h1").textContent = `R$ 00,00`
     }
